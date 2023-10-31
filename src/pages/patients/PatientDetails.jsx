@@ -37,7 +37,7 @@ export const PatientDetails = () => {
   return (
     <Flex flexDirection="column" justifyContent="center" alignItems="center">
       <Heading size="md" m="1rem">
-        Student Details
+        Patient Details
       </Heading>
       <Card w="20rem">
         <CardBody textAlign="center">

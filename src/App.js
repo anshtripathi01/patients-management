@@ -26,7 +26,7 @@ function App() {
         <Route path="/wards" element={<Wards />} />
         <Route path="/ward/add" element={<WardForm />} />
         <Route path="/ward/edit" element={<WardForm />} />
-        <Route path="/teachers/:teacherId" element={<WardDetails />} />
+        <Route path="/wards/:wardId" element={<WardDetails />} />
       </Routes>
     </Flex>
   );
