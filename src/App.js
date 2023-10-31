@@ -8,10 +8,14 @@ import { PatientDetails } from "./pages/patients/PatientDetails";
 import { WardForm } from "./pages/wards/WardForm";
 import { WardDetails } from "./pages/wards/WardDetails";
 import { Header } from "./components/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+
   return (
     <Flex flexDirection="column">
+    <ToastContainer />
       <Header />
       <Routes>
         <Route path="/" element={<HospitalView />} />
