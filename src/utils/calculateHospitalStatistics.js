@@ -14,8 +14,7 @@ export function calculateHospitalStatistics(patients, wards) {
 
   const totalPatients = patients.length;
 
-  const occupiedBeds = patients.filter((patient) => patient).length;
-  const occupancyRate = ((occupiedBeds / totalPatients) * 100).toFixed(2);
+  const occupancyRate = ((wards.length / totalPatients) * 100).toFixed(2);
 
   const totalLengthOfStay = patients.reduce(
     (total, patient) => total + patients.length,
@@ -28,10 +27,10 @@ export function calculateHospitalStatistics(patients, wards) {
       return {
         name: patient.assignedWard,
         criteria: `Ward Capacity: ${
-          wards.find(
-            ({ wardNumber }) =>
-              parseInt(wardNumber) === parseInt(patient.assignedWard)
-          )?.capacity
+            wards.find(
+                ({ wardNumber }) =>
+                  parseInt(wardNumber) === parseInt(patient.assignedWard)
+              )?.capacity
         }`,
       };
     }

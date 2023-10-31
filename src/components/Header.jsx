@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Button, Flex, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -29,7 +29,7 @@ export const Header = () => {
               Wards
             </NavLink>
             <NavLink style={activeLink} to="https://github.com/anshtripathi01/patients-management">
-              Github Repo
+              <Button variant="solid" colorScheme='teal'>Github</Button>
             </NavLink>
           </Flex>
         </Flex>
